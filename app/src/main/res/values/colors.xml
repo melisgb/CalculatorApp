@@ -6,11 +6,10 @@
     <color name="backgroundColor">#17181A</color>
     <color name="screenColor">#17181A</color>
     <color name="resetColor">#56FB9BBB</color>
+    <color name="resetTextColor">#FF9191</color>
+    <color name="equalColor">#2CC972</color>
     <color name="operatorsColor">#FF9501</color>
     <color name="operatorTextColor">#25262A</color>
     <color name="numbersColor">#25262A</color>
     <color name="textColor">#D6D6D6</color>
-    <color name="equalColor">#2CC972</color>
-<!--    D95555-->
-    <color name="resetTextColor">#FF9191</color>
 </resources>

@@ -11,16 +11,18 @@
 
 
     <EditText
-        android:id="@+id/resultsEditText"
+        android:id="@+id/screenEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:background="@color/screenColor"
         android:ems="10"
         android:gravity="right|bottom"
-        android:inputType="textMultiLine|none"
+        android:inputType="none|textMultiLine"
+        android:textIsSelectable="true"
+        android:enabled="false"
         android:maxLines="2"
-        android:paddingTop="25pt"
+        android:paddingTop="20pt"
         android:paddingEnd="5pt"
         android:paddingBottom="5pt"
         android:text="0"
@@ -50,7 +52,9 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:text="AC"
                 android:textColor="@color/resetTextColor"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:elevation="30dp"
+                android:onClick="resetText"/>
 
             <Button
                 android:id="@+id/signChangeButton"
@@ -64,21 +68,24 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:text="+/-"
                 android:textColor="@color/operatorTextColor"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:elevation="30dp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/percentButton"
-                android:layout_height="30pt"
                 android:layout_width="25pt"
+                android:layout_height="30pt"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/operatorsColor"
                 android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/operatorsColor"
                 android:foreground="?attr/selectableItemBackground"
-                android:textColor="@color/operatorTextColor"
                 android:text="%"
-                android:textSize="24sp" />
+                android:textColor="@color/operatorTextColor"
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/divideButton"
@@ -92,7 +99,8 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/operatorTextColor"
                 android:text="/"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="operatorButtonClick" />
         </TableRow>
 
         <TableRow
@@ -157,7 +165,8 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/operatorTextColor"
                 android:text="*"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="operatorButtonClick" />
         </TableRow>
 
         <TableRow
@@ -222,7 +231,8 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/operatorTextColor"
                 android:text="-"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="operatorButtonClick" />
         </TableRow>
 
         <TableRow
@@ -287,7 +297,8 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/operatorTextColor"
                 android:text="+"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="operatorButtonClick" />
         </TableRow>
 
     </TableLayout>
@@ -340,7 +351,8 @@
             android:foreground="?attr/selectableItemBackground"
             android:text="="
             android:textColor="@color/operatorTextColor"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="calculateResultClick" />
     </LinearLayout>
 
 </LinearLayout>

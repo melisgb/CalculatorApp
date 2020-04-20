@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="@color/backgroundColor"
     android:orientation="vertical"
     android:padding="8pt"
     tools:context=".MainActivity">
@@ -15,16 +15,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:background="@color/screenColor"
         android:ems="10"
-        android:gravity="right"
+        android:gravity="right|bottom"
+        android:maxLines="3"
         android:inputType="textPersonName"
         android:paddingTop="25pt"
-        android:paddingRight="5pt"
-        android:paddingBottom="2pt"
+        android:paddingEnd="5pt"
+        android:paddingBottom="5pt"
         android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:textColor="@color/textColor"
+        android:background="@color/screenColor" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -38,35 +39,38 @@
 
             <Button
                 android:id="@+id/acButton"
-                android:layout_width="40pt"
+                android:layout_width="30pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/resetColor"
+                android:textColor="@color/resetTextColor"
                 android:text="AC"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/signChangeButton"
-                android:layout_width="40pt"
+                android:layout_width="30pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/operatorsColor"
+                android:textColor="@color/textColor"
                 android:text="+/-"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/percentButton"
-                android:layout_width="40pt"
+                android:layout_width="30pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/operatorsColor"
+                android:textColor="@color/textColor"
                 android:text="%"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/divideButton"
-                android:layout_width="40pt"
+                android:layout_width="30pt"
                 android:layout_height="30pt"
-                android:background="@color/orangeBack"
+                android:background="@color/operatorsColor"
+                android:textColor="@color/textColor"
                 android:text="/"
-                android:textColor="#FFFFFF"
                 android:textSize="24sp" />
         </TableRow>
 
@@ -78,33 +82,39 @@
                 android:id="@+id/sevenButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/gray"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="7"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick"/>
 
             <Button
                 android:id="@+id/eightButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="8"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/nineButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="9"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/multiplyButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/orangeBack"
+                android:background="@color/operatorsColor"
+                android:textColor="@color/textColor"
                 android:text="*"
-                android:textColor="#FFFFFF"
                 android:textSize="24sp" />
         </TableRow>
 
@@ -116,33 +126,39 @@
                 android:id="@+id/fourButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="4"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/fiveButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="5"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/sixButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="6"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/minusButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/orangeBack"
+                android:background="@color/operatorsColor"
+                android:textColor="@color/textColor"
                 android:text="-"
-                android:textColor="#FFFFFF"
                 android:textSize="24sp" />
         </TableRow>
 
@@ -154,33 +170,39 @@
                 android:id="@+id/oneButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="1"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/twoButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="2"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/threeButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/whiteBack"
+                android:background="@color/numbersColor"
+                android:textColor="@color/textColor"
                 android:text="3"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="numberButtonClick" />
 
             <Button
                 android:id="@+id/sumButton"
                 android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/orangeBack"
+                android:background="@color/operatorsColor"
+                android:textColor="@color/textColor"
                 android:text="+"
-                android:textColor="#FFFFFF"
                 android:textSize="24sp" />
         </TableRow>
 
@@ -193,27 +215,33 @@
 
         <Button
             android:id="@+id/ceroButton"
+            style="@style/CalcButtonsTheme"
             android:layout_width="80pt"
             android:layout_height="30pt"
-            android:background="@color/whiteBack"
+            android:background="@color/numbersColor"
+            android:textColor="@color/textColor"
             android:text="0"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="numberButtonClick" />
 
         <Button
             android:id="@+id/dotButton"
+            style="@style/CalcButtonsTheme"
             android:layout_width="40pt"
             android:layout_height="30pt"
-            android:background="@color/whiteBack"
+            android:background="@color/numbersColor"
+            android:textColor="@color/textColor"
             android:text="."
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:onClick="numberButtonClick" />
 
         <Button
             android:id="@+id/equalsButton"
             android:layout_width="40pt"
             android:layout_height="30pt"
-            android:background="@color/orangeBack"
+            android:background="@color/equalColor"
             android:text="="
-            android:textColor="#FFFFFF"
+            android:textColor="@color/textColor"
             android:textSize="24sp" />
     </LinearLayout>
 

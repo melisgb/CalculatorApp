@@ -15,17 +15,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:background="@color/screenColor"
         android:ems="10"
         android:gravity="right|bottom"
-        android:maxLines="3"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine|none"
+        android:maxLines="2"
         android:paddingTop="25pt"
         android:paddingEnd="5pt"
         android:paddingBottom="5pt"
         android:text="0"
-        android:textSize="40sp"
         android:textColor="@color/textColor"
-        android:background="@color/screenColor" />
+        android:textSize="40sp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -35,54 +35,81 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
 
             <Button
                 android:id="@+id/acButton"
-                android:layout_width="30pt"
+                android:layout_width="25pt"
                 android:layout_height="30pt"
-                android:background="@color/resetColor"
-                android:textColor="@color/resetTextColor"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/resetColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:text="AC"
+                android:textColor="@color/resetTextColor"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/signChangeButton"
-                android:layout_width="30pt"
+                android:layout_width="25pt"
                 android:layout_height="30pt"
-                android:background="@color/operatorsColor"
-                android:textColor="@color/textColor"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operatorsColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:text="+/-"
+                android:textColor="@color/operatorTextColor"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/percentButton"
-                android:layout_width="30pt"
                 android:layout_height="30pt"
-                android:background="@color/operatorsColor"
-                android:textColor="@color/textColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operatorsColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/operatorTextColor"
                 android:text="%"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/divideButton"
-                android:layout_width="30pt"
                 android:layout_height="30pt"
-                android:background="@color/operatorsColor"
-                android:textColor="@color/textColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operatorsColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/operatorTextColor"
                 android:text="/"
                 android:textSize="24sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
             <Button
                 android:id="@+id/sevenButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/textColor"
                 android:text="7"
                 android:textSize="24sp"
@@ -90,19 +117,29 @@
 
             <Button
                 android:id="@+id/eightButton"
-                android:layout_width="40pt"
+                android:layout_width="25pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
-                android:textColor="@color/textColor"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="numberButtonClick"
                 android:text="8"
-                android:textSize="24sp"
-                android:onClick="numberButtonClick" />
+                android:textColor="@color/textColor"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/nineButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/textColor"
                 android:text="9"
                 android:textSize="24sp"
@@ -110,23 +147,34 @@
 
             <Button
                 android:id="@+id/multiplyButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/operatorsColor"
-                android:textColor="@color/textColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operatorsColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/operatorTextColor"
                 android:text="*"
                 android:textSize="24sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
             <Button
                 android:id="@+id/fourButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/textColor"
                 android:text="4"
                 android:textSize="24sp"
@@ -134,9 +182,14 @@
 
             <Button
                 android:id="@+id/fiveButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/textColor"
                 android:text="5"
                 android:textSize="24sp"
@@ -144,9 +197,14 @@
 
             <Button
                 android:id="@+id/sixButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/textColor"
                 android:text="6"
                 android:textSize="24sp"
@@ -154,23 +212,34 @@
 
             <Button
                 android:id="@+id/minusButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/operatorsColor"
-                android:textColor="@color/textColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operatorsColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/operatorTextColor"
                 android:text="-"
                 android:textSize="24sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
             <Button
                 android:id="@+id/oneButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/textColor"
                 android:text="1"
                 android:textSize="24sp"
@@ -178,9 +247,14 @@
 
             <Button
                 android:id="@+id/twoButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/textColor"
                 android:text="2"
                 android:textSize="24sp"
@@ -188,9 +262,14 @@
 
             <Button
                 android:id="@+id/threeButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/numbersColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/numbersColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/textColor"
                 android:text="3"
                 android:textSize="24sp"
@@ -198,10 +277,15 @@
 
             <Button
                 android:id="@+id/sumButton"
-                android:layout_width="40pt"
                 android:layout_height="30pt"
-                android:background="@color/operatorsColor"
-                android:textColor="@color/textColor"
+                android:layout_width="25pt"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operatorsColor"
+                android:background="@drawable/rounded_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/operatorTextColor"
                 android:text="+"
                 android:textSize="24sp" />
         </TableRow>
@@ -211,14 +295,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
 
         <Button
             android:id="@+id/ceroButton"
-            style="@style/CalcButtonsTheme"
-            android:layout_width="80pt"
             android:layout_height="30pt"
-            android:background="@color/numbersColor"
+            android:layout_width="55pt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="2"
+            android:backgroundTint="@color/numbersColor"
+            android:background="@drawable/rounded_button"
+            android:foreground="?attr/selectableItemBackground"
             android:textColor="@color/textColor"
             android:text="0"
             android:textSize="24sp"
@@ -226,10 +315,14 @@
 
         <Button
             android:id="@+id/dotButton"
-            style="@style/CalcButtonsTheme"
-            android:layout_width="40pt"
             android:layout_height="30pt"
-            android:background="@color/numbersColor"
+            android:layout_width="25pt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/numbersColor"
+            android:background="@drawable/rounded_button"
+            android:foreground="?attr/selectableItemBackground"
             android:textColor="@color/textColor"
             android:text="."
             android:textSize="24sp"
@@ -237,11 +330,16 @@
 
         <Button
             android:id="@+id/equalsButton"
-            android:layout_width="40pt"
             android:layout_height="30pt"
-            android:background="@color/equalColor"
+            android:layout_width="25pt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/equalColor"
+            android:background="@drawable/rounded_button"
+            android:foreground="?attr/selectableItemBackground"
             android:text="="
-            android:textColor="@color/textColor"
+            android:textColor="@color/operatorTextColor"
             android:textSize="24sp" />
     </LinearLayout>
 

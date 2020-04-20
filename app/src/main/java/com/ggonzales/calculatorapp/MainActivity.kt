@@ -23,5 +23,9 @@ class MainActivity : AppCompatActivity() {
             if(resultsEditText.text.contains(".")) return
         }
         resultsEditText.text.append(buttonSelected.text.toString())
+
+
+
+
     }
 }

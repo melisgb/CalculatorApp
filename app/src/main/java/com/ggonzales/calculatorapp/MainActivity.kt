@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
 
@@ -97,7 +99,9 @@ class MainActivity : AppCompatActivity() {
 
         else {
             if(newNumber[newNumber.length-1]=='%') {
-                newNumber = (newNumber.substring(0, newNumber.length-1).toDouble() / 100).toString()
+                val percInNumber = newNumber.substring(0, newNumber.length-1).toDouble() / 100
+                if(oper in arrayOf("+","-")) newNumber = (percInNumber * oldNumber.toDouble()).toString()
+                if(oper in arrayOf("*","/")) newNumber = percInNumber.toString()
             }
             when (oper) {
                 "+" -> result = oldNumber.toDouble() + newNumber.toDouble()
@@ -105,14 +109,26 @@ class MainActivity : AppCompatActivity() {
                 "*" -> result = oldNumber.toDouble() * newNumber.toDouble()
                 "/" -> result = oldNumber.toDouble() / newNumber.toDouble()
             }
-            result = String.format("%.2f", result).toDouble()
         }
-            screenEditText.setText(result.toString())
+            result = avoidExclusions(result)
+            screenEditText.setText(DecimalFormat("#.##").format(result))
     }
 
     fun resetText(view : View){
         var acButton = view as Button
         screenEditText.setText("")
 
+    }
+
+    fun avoidExclusions(result: Double) : Double{
+        if (result.isInfinite() == true){
+            Toast.makeText(this, "Cannot divide by 0", Toast.LENGTH_SHORT).show()
+            return 0.0
+        }
+        if(result.isNaN()){
+            Toast.makeText(this, "Error diving 0 by 0", Toast.LENGTH_SHORT).show()
+            return 0.0
+        }
+        return result
     }
 }

@@ -12,7 +12,7 @@
 
     <EditText
         android:id="@+id/screenEditText"
-        android:layout_height="40pt"
+        android:layout_height="25pt"
         android:layout_width="match_parent"
         android:layout_weight="0"
         android:background="@color/screenColor"
@@ -22,7 +22,6 @@
         android:textIsSelectable="true"
         android:enabled="false"
         android:maxLines="1"
-        android:paddingTop="5pt"
         android:paddingEnd="5pt"
         android:text="0"
         android:textColor="@color/textColor"

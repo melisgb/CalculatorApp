@@ -12,8 +12,8 @@
 
     <EditText
         android:id="@+id/screenEditText"
-        android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_width="match_parent"
         android:layout_weight="0"
         android:background="@color/screenColor"
         android:ems="10"
@@ -42,8 +42,8 @@
 
             <Button
                 android:id="@+id/acButton"
-                android:layout_width="25pt"
                 android:layout_height="30pt"
+                android:layout_width="25pt"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -58,8 +58,8 @@
 
             <Button
                 android:id="@+id/signChangeButton"
-                android:layout_width="25pt"
                 android:layout_height="30pt"
+                android:layout_width="25pt"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -74,8 +74,8 @@
 
             <Button
                 android:id="@+id/percentButton"
-                android:layout_width="25pt"
                 android:layout_height="30pt"
+                android:layout_width="25pt"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -125,8 +125,8 @@
 
             <Button
                 android:id="@+id/eightButton"
-                android:layout_width="25pt"
                 android:layout_height="30pt"
+                android:layout_width="25pt"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
